@@ -22,3 +22,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl ifconfig.me
+          wget --user-agent=Mozilla --content-disposition -E -c https://click.a-ads.com/1843502/98644/

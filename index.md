@@ -1,1 +1,1 @@
-# btcfucker.github.io
+# **Fuck bitcoin**

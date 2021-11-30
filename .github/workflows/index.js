@@ -1,5 +1,3 @@
-const playwright = require('playwright');
-
 (async () => {
     const browser = await playwright.chromium.launch({ args: ['--no-sandbox'] });
     const context = await browser.newContext();

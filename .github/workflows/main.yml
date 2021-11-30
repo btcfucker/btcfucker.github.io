@@ -23,3 +23,11 @@ jobs:
         run: |
           curl ifconfig.me
           wget --user-agent=Mozilla --content-disposition -E -c https://click.a-ads.com/1843502/98644/
+      - name: Install dependencies
+        uses: tj-actions/puppeteer@v3.2
+        with:
+          args: yarn install
+      - name: Run test
+        uses: tj-actions/puppeteer@v3.2
+        with:
+          args: yarn index.js

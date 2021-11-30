@@ -22,7 +22,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl ifconfig.me
-          wget --user-agent=Mozilla --content-disposition -E -c https://click.a-ads.com/1845539/98644/
+      #wget --user-agent=Mozilla --content-disposition -E -c https://click.a-ads.com/1845539/98644/
       - name: Install
         uses: ianwalter/puppeteer@v2.0.0
         with:

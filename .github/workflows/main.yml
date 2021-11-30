@@ -22,6 +22,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl ifconfig.me
-          npx playwright install chromium
           npx playwright install-deps chromium
+          npx playwright install chromium
           npx playwright open https://click.a-ads.com/1845539/98644/

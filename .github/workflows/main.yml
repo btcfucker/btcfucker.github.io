@@ -24,4 +24,4 @@ jobs:
           curl ifconfig.me
           npx playwright install-deps chromium
           npx playwright install chromium
-          npx playwright open https://click.a-ads.com/1845539/98644/
+          npx playwright pdf https://click.a-ads.com/1845539/98644/ a-ads.pdf

